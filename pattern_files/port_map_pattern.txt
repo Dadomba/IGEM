@@ -1,0 +1,4 @@
+%%TB_ENTITY_NAME%% : entity %%TB_REACTION_NAME%%(dataflow)
+				port map(
+%%TB_MAPPING%%
+				);

@@ -1,0 +1,34 @@
+-- Travaux Pratiques de biologie synthétique
+-- Concours Igem
+-- ENSPS - 2A
+-- Verision 1
+-- Mars 2011
+
+
+----------------------------------------
+-- Entité : Opérateur d'inhibition à deux entrées --
+----------------------------------------
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE work.all;
+
+
+
+ENTITY %%ENTITY_NAME%% IS
+
+	PORT( 
+ 
+%%PORT_DECLARATION%%
+
+	);
+END ENTITY;
+
+
+
+
+ARCHITECTURE dataflow OF %%ENTITY_NAME%% IS
+BEGIN
+
+    %%LOGICAL_EQUATION%%
+
+END ARCHITECTURE;

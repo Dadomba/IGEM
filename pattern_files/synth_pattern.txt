@@ -1,0 +1,32 @@
+-- ENSPS - 2A
+-- Version 1
+-- Mars 2011
+
+
+-----------------------------------------
+--   Activator & Repressor Synthesis   --
+-----------------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE work.all;
+
+ENTITY %%ENTITY_NAME%% IS
+   PORT( 
+
+%%PORT_DECLARATION%%
+
+	);
+END ENTITY;
+
+
+
+
+ARCHITECTURE dataflow OF %%ENTITY_NAME%% IS
+BEGIN
+
+	%%LOGICAL_EQUATION%%
+
+END ARCHITECTURE;
+
+
