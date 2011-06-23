@@ -1,0 +1,30 @@
+-- ENSPS - Igem project
+-- Version 1
+-- May 2011
+
+-------------------------------
+--       PATTERN FILE        --
+--   Test Bench Genaration   --
+-------------------------------
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE work.all;
+
+ENTITY %%TB_ENTITY_NAME%% IS
+END ENTITY;
+
+
+ARCHITECTURE %%TB_ARCHITECTURE_NAME%% OF %%TB_ENTITY_NAME%% IS
+
+   -- signals declaration
+
+
+%%TB_SIGNAL_DECLARATION%%
+
+BEGIN
+
+						 
+%%TB_PORT_MAP%% 
+						 			
+
+END ARCHITECTURE;
