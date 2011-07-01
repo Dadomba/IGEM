@@ -369,7 +369,7 @@ string System::generate_port_map()
                 }
                 tmp += "\n";
             }
-            tmp += "\t\t\t\tS => ";
+            tmp += "\t\t\t\t" + synth_array[i]->get_output_species().Get_name() + " => ";
             for(int x=0;x<species_list_size;x++){
                     if(synth_array[i]->get_output_species().Get_name() == species_list[x].name_sp){
                         tmp += species_list[x].signal;

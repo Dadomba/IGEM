@@ -66,7 +66,7 @@ const string Synth::log_eq() const
 
     string str="";
 
-    str += "S <= (";
+    str += (out.Get_name() + " <= (");
 
     for(int i =0; i<nb_Act-1; i++)
     {
@@ -101,7 +101,7 @@ const string Synth::portmap() const
         str+= ("\t\t" + Rep[i].Get_name() + " : IN  STD_LOGIC;\n");
     }
 
-    str += "\t\tS : OUT STD_LOGIC";
+    str += ("\t\t" + out.Get_name() + " : OUT STD_LOGIC");
 
 
     return str;
