@@ -86,8 +86,6 @@ bool Reaction::file_creation()
     string path = "generated_files\\" + file_name_user + ".vhd";
 
     ofstream w_file(path.c_str(), ios::out | ios::trunc);
-
-    bool test = r_file;
     bool res = w_file;
 
     if(r_file && w_file)

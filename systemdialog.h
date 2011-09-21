@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QList>
+#include <QSet>
 #include <QTreeWidget>
 #include <QMessageBox>
 
@@ -21,8 +22,11 @@ public:
 
 private:
     Ui::systemDialog *ui;
+    void refresh_species_available();
 
 private slots:
+    void on_button_remove_specie_clicked();
+    void on_button_add_specie_clicked();
     void on_button_cancel_clicked();
     void on_button_create_system_clicked();
     void on_button_remove_clicked();

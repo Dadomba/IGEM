@@ -13,6 +13,7 @@
 #define TB_SIGNAL_DECLARATION "%%TB_SIGNAL_DECLARATION%%"
 #define TB_PORT_MAP "%%TB_PORT_MAP%%"
 #define TB_MAPPING "%%TB_MAPPING%%"
+#define TB_SIGNAL_GENERATION "%%TB_SIGNAL_GENERATION%%"
 
 
 
@@ -158,7 +159,7 @@ string System::generate_port_map()
             new_tab = new p_Reaction[cplx_indice+1];
             for(int m=0; m<cplx_indice; m++)
             {
-                new_tab[m]=inh_array[m];
+                new_tab[m]=cplx_array[m];
             }
             new_tab[cplx_indice] = reaction_array[i];
             cplx_array = new_tab;
@@ -543,4 +544,15 @@ void System::species_list_generation(){
         }
     }
 
+}
+
+QList<list_sig> System::get_species_in_system(){
+
+    QList<list_sig> list;
+
+    for(int i=0;i<species_list_size;i++){
+        list<<species_list[i];
+    }
+
+    return list;
 }

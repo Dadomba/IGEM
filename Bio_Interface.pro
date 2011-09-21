@@ -9,7 +9,7 @@ QT       += core gui
 TARGET = Bio_Interface
 TEMPLATE = app
 
-RC_FILE = ressources.rc
+RC_FILE = ressource.rc
 
 #CONFIG  += CONSOLE
 
@@ -52,4 +52,4 @@ FORMS    += mainwindow.ui \
     systemdialog.ui
 
 OTHER_FILES += \
-    ressources.rc
+    ressource.rc

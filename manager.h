@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include <QObject>
+#include <QInputDialog>
 #include "mainwindow.h"
 #include "species.h"
 #include "reaction.h"
@@ -35,6 +36,7 @@ public:
     bool addReactionToList(Reaction *react_to_add);
     bool removeReactionFromList(string name);
     bool isReactionInList(string name);
+    bool patCreation(QString name, QStringList reactions, p_Reaction *reaction_in_system_tab, int reaction_in_system_tab_size);
 
 public slots:
     void speciesAddRequest(string name, bool initial_value);

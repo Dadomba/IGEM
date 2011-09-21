@@ -348,8 +348,33 @@ void Manager::systemCreationRequest(QString name, QStringList reactions){
         reaction_in_system_tab[i]->file_creation();
     }
 
+    patCreation(name,reactions,reaction_in_system_tab,reaction_in_system_tab_size);
+
     System new_system(reaction_in_system_tab,reaction_in_system_tab_size,"E_"+name.toStdString(),name.toStdString(),name.toStdString());
     bool res = new_system.test_bench_generation();
     emit systemCreationSuccess(res,name);
+
+}
+
+bool Manager::patCreation(QString name, QStringList reactions, p_Reaction *reaction_in_system_tab, int reaction_in_system_tab_size){
+
+    std::ofstream w_file(("generated_files\\"+name+".pat").toStdString().c_str(), ios::out | ios::trunc);
+    bool res = w_file;
+
+    w_file<<".VHDL SET KIND=AMS"<<std::endl<<std::endl;
+
+    for(int i=0;i<reaction_in_system_tab_size;i++){
+        w_file<<".VHDL COMPILE LIBRARY=WORK SOURCE=" + reaction_in_system_tab[i]->get_file_name_user() + ".vhd"<<std::endl;
+    }
+
+    w_file<<".VHDL COMPILE LIBRARY=WORK SOURCE=" + name.toStdString() + ".vhd"<<std::endl;
+
+    w_file<<std::endl<<".VHDL elaborate WORK.E_"+name.toStdString()<<std::endl;
+
+    double end_time = QInputDialog::getDouble(this->ui, "End time of the simulation", "Enter in second the length of the simulation.");
+    double step_time = QInputDialog::getDouble(this->ui, "Step time of the simulation", "Enter in second the step time of the simulation.");
+    w_file<<".Tran " + QString::number(step_time).toStdString() + "s " + QString::number(end_time).toStdString() + "s"<<std::endl;
+
+    return res;
 
 }

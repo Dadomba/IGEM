@@ -25,6 +25,8 @@ BEGIN
 
 						 
 %%TB_PORT_MAP%% 
+
+%%TB_SIGNAL_GENERATION%% 
 						 			
 
 END ARCHITECTURE;

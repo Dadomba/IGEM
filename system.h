@@ -1,6 +1,7 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 
+#include <QList>
 #include <string>
 #include "reaction.h"
 #include "bio_cst.h"
@@ -13,6 +14,7 @@ public :
     System(p_Reaction* _reaction_array, int _size_array, string testbench_entity_name, string testbench_architecture_name, string file_name);
     ~System();
     bool test_bench_generation();
+    QList<list_sig> get_species_in_system();
 
 private :
 

@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Bio 2012</string>
+   <string notr="true">Behavioral Code Generator</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -268,9 +268,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QCommandLinkButton" name="commandLinkButton">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>270</y>
-      <width>191</width>
+      <x>350</x>
+      <y>260</y>
+      <width>141</width>
       <height>41</height>
      </rect>
     </property>
@@ -285,7 +285,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
